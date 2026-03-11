@@ -1,4 +1,4 @@
-.achievements3-section {
+.achievements-section {
   position: relative;
   z-index: 5;
   background-color: var(--bg-primary);
@@ -45,8 +45,9 @@
 
 .hover-glow:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(59, 130, 246, 0.15);
-  background: rgba(30, 34, 42, 0.6);
+  /* Use 0 for x and y offsets to make shadow perfectly even */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2), 0 0 25px var(--accent-glow);
+  background: var(--glass-hover);
 }
 
 .hover-glow:hover::before {
@@ -57,7 +58,7 @@
 .achieve-bento-main {
   grid-column: span 2;
   grid-row: span 2;
-  background: linear-gradient(145deg, rgba(26, 29, 36, 0.8), rgba(15, 17, 21, 0.9));
+  background: var(--glass-bg);
   justify-content: center;
 }
 
@@ -84,7 +85,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, rgba(26, 29, 36, 0.6), rgba(15, 17, 21, 0.8));
+  background: var(--glass-bg);
 }
 
 .wide-content-left {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProjectsSection.css';
-import { projectsData } from '../data/projectsData';
+import { projectsData } from '../../data/projectsData';
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);

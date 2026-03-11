@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ExperienceSection from './components/ExperienceSection';
-import AchievementsSection from './components/Achievements3/Achievements3';
-import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+import HeroSection from './components/HeroSection/HeroSection';
+import AboutSection from './components/AboutSection/AboutSection';
+import ExperienceSection from './components/ExperienceSection/ExperienceSection';
+import AchievementsSection from './components/Achievements/Achievements';
+import ProjectsSection from './components/ProjectsSection/ProjectsSection';
+import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

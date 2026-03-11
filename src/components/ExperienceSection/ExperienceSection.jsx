@@ -1,6 +1,6 @@
 import React from 'react';
 import './ExperienceSection.css';
-import { experiencesData } from '../data/experienceData';
+import { experiencesData } from '../../data/experienceData';
 
 const ExperienceSection = () => {
   return (

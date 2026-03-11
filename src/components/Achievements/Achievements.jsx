@@ -1,10 +1,10 @@
 import React from 'react';
-import './Achievements3.css';
+import './Achievements.css';
 import { achievementsData } from '../../data/achievementsData';
 
-const Achievements3 = () => {
+const Achievements = () => {
   return (
-    <section id="achievements" className="section achievements3-section">
+    <section id="achievements" className="section achievements-section">
       <div className="container">
         <h2 className="section-title">{achievementsData.title}</h2>
         
@@ -62,4 +62,4 @@ const Achievements3 = () => {
   );
 };
 
-export default Achievements3;
+export default Achievements;
