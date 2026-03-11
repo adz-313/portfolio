@@ -1,0 +1,263 @@
+.projects-section {
+  position: relative;
+  z-index: 5;
+  background-color: var(--bg-secondary);
+}
+
+.projects-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-gap: 2rem;
+  overflow-x: auto;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 2rem; /* space for scrollbar/shadows */
+  padding-top: 1rem; /* space for top shadow bouncing */
+  padding-left: 0.5rem; /* space for left shadow */
+  padding-right: 0.5rem; /* space for right shadow */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom hide scrollbar for clean look but keep scrollability */
+.projects-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.projects-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  height: 450px; /* Force a consistent height */
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-bounce);
+  
+  /* Keep original minimum size but prevent shrinking */
+  width: min(100%, 380px); /* This gives it the same flexible width as grid */
+  flex: 0 0 380px; 
+  scroll-snap-align: center; /* Center snapping feels better */
+}
+
+/* Theme-colored border effect on hover */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  padding: 2px;
+  background: var(--accent-gradient);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: var(--transition-normal);
+  pointer-events: none;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -5px var(--accent-glow);
+  background: rgba(30, 35, 45, 0.6);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.folder-icon {
+  color: var(--accent-blue);
+  opacity: 0.8;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: var(--text-secondary);
+  transition: var(--transition-normal);
+}
+
+.project-links a:hover {
+  color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+  min-height: 3.6rem; /* Ensures title area is uniform even if names span 1 or 2 lines */
+  display: flex;
+  align-items: center;
+}
+
+.project-card:hover .project-title {
+  color: var(--accent-blue);
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+.read-more-btn:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.project-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.project-modal {
+  background: var(--bg-secondary);
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+}
+
+.modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-right: 2rem;
+}
+
+.modal-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.modal-tech-list {
+  margin-bottom: 2.5rem;
+}
+
+.modal-tech-list li {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-top: auto; /* Push tech list to the bottom */
+}
+
+.project-tech-list li {
+  transition: var(--transition-fast);
+}
+
+.project-card:hover .project-tech-list li {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 85vw; /* Almost full width on mobile */
+  }
+}

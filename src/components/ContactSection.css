@@ -1,0 +1,116 @@
+.text-style-contact {
+  padding: 8rem 0 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Divider to separate from the previous option */
+}
+
+.contact-container-typo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.typo-heading {
+  font-size: clamp(4rem, 10vw, 9rem); /* Massive responsive typography */
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.typo-highlight {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: var(--transition-bounce);
+  display: inline-block;
+}
+
+.typo-heading:hover .typo-highlight {
+  transform: scale(1.05) rotate(-2deg);
+  -webkit-text-stroke: 0px;
+  filter: drop-shadow(0 0 30px var(--accent-glow));
+}
+
+.typo-email {
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 4rem;
+  position: relative;
+  transition: var(--transition-normal);
+  display: inline-block;
+}
+
+.typo-email::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--accent-gradient);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.typo-email:hover {
+  color: var(--text-primary);
+}
+
+.typo-email:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.typo-links {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.typo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: var(--transition-bounce);
+}
+
+.typo-arrow {
+  color: var(--accent-blue);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform: translate(0, 0);
+}
+
+.typo-link:hover {
+  color: var(--accent-cyan);
+}
+
+.typo-link:hover .typo-arrow {
+  transform: translate(4px, -4px);
+  color: var(--accent-purple);
+}
+
+@media (max-width: 768px) {
+  .typo-links {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+}
