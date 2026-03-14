@@ -8,7 +8,7 @@ export const heroData = {
   links: {
     projects: "#projects",
     resume: "/resume.pdf",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com"
+    github: "https://github.com/adz-313",
+    linkedin: "https://www.linkedin.com/in/aditya-sawant-2000/"
   }
 };
