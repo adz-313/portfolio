@@ -1,4 +1,3 @@
-import React from 'react';
 import './BonusSection.css';
 
 const BonusSection = () => {

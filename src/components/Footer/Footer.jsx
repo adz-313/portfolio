@@ -31,7 +31,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; {currentYear} Built with ❤️ by Aditya Sawant.
+            &copy; {currentYear} Built with ❤️ by Antigravity and its sidekick, Adi.
           </p>
           <a href="#hero" className="btn-back-to-top">
             Back to Top &uarr;

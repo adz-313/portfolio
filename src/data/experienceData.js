@@ -15,7 +15,7 @@ export const experiencesData = {
       company: "Persistent Systems Ltd.",
       period: "2022 - 2024",
       description: ["Developed a module to handle end-to-end attachment uploads and client email sending, eliminating manual database queries and reducing processing time by 70%.", "Created a new module to consolidate user activity and display data in tables and charts within the admin tool, removing the need for query based analysis saving time taken by 30%."],
-      technologies: ["Spring Boot", "Gradle", "Oracle SQL", "Apache ActiveMQ", "BitBucket", "Jira", "Confluence"]
+      technologies: ["Java", "Spring Boot", "Gradle", "Oracle SQL", "Apache ActiveMQ", "BitBucket", "Jira", "Confluence"]
     }
   ]
 };

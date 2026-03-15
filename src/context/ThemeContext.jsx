@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect, useContext } from 'react';
-import { themes } from '../data/themeData';
 
 const ThemeContext = createContext();
 
@@ -12,28 +11,25 @@ export const ThemeProvider = ({ children }) => {
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme !== 'light';
     setIsDarkMode(isDark);
-    applyTheme(isDark ? 'dark' : 'light');
-  }, []);
-
-  const applyTheme = (themeName) => {
-    const theme = themes[themeName];
-    Object.keys(theme).forEach(key => {
-      document.documentElement.style.setProperty(key, theme[key]);
-    });
-
-    if (themeName === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
+    
+    if (isDark) {
       document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
     }
-  };
+  }, []);
 
   const toggleTheme = () => {
     const newIsDark = !isDarkMode;
     setIsDarkMode(newIsDark);
-    const themeName = newIsDark ? 'dark' : 'light';
-    localStorage.setItem('theme', themeName);
-    applyTheme(themeName);
+    
+    if (newIsDark) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
   return (

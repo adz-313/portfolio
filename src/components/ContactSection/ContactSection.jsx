@@ -1,4 +1,3 @@
-import React from 'react';
 import './ContactSection.css';
 import { socialLinks } from '../../data/socialLinks';
 

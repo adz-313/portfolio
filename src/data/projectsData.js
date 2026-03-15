@@ -3,10 +3,10 @@ export const projectsData = {
   projects: [
     {
       id: 1,
-      name: "High-Frequency Trading Engine",
-      description: "A low-latency trading engine built using Java and Spring Boot. Processes market data feeds and executes trades with sub-millisecond precision. Includes a risk-management module to monitor exposure in real-time.",
-      technologies: ["Java", "Spring Boot", "Kafka", "WebSockets", "Redis"],
-      githubLink: "https://github.com",
+      name: "Flash Sale System",
+      description: "Designed and built a high-concurrency flash sale system simulating large-scale e-commerce events with limited inventory and 10K+ simultaneous users. Implemented a token-based purchase flow with Kafka request queueing to prevent overselling, and used Redis distributed locking for atomic stock deduction across services. Built on a Java, Spring Boot, MySQL, and Kafka microservices stack with Redis caching to handle traffic spikes, containerized with Docker and architected for horizontal scalability and fault tolerance.",
+      technologies: ["Java", "Spring Boot", "Redis", "Kafka", "MySQL", "Docker"],
+      githubLink: "#",
       demoLink: "#"
     },
     {
