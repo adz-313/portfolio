@@ -1,3 +1,4 @@
+import { socialLinks } from '../../data/socialLinks';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,15 +15,15 @@ const Footer = () => {
           </div>
 
           <div className="footer-socials">
-            <a href="https://github.com/adz-313" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               GitHub
             </a>
             <span className="footer-separator"></span>
-            <a href="https://linkedin.com/in/aditya-sawant-2000" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               LinkedIn
             </a>
             <span className="footer-separator"></span>
-            <a href="mailto:sawantaj20@gmail.com" aria-label="Email">
+            <a href={`mailto:${socialLinks.email}`} aria-label="Email">
               Email
             </a>
           </div>

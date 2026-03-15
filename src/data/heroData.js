@@ -1,3 +1,5 @@
+import { socialLinks } from './socialLinks';
+
 export const heroData = {
   title: ["backend.", "architect.", "builder."],
   name: "Aditya Sawant",
@@ -8,7 +10,7 @@ export const heroData = {
   links: {
     projects: "#projects",
     resume: "/resume.pdf",
-    github: "https://github.com/adz-313",
-    linkedin: "https://www.linkedin.com/in/aditya-sawant-2000/"
+    github: socialLinks.github,
+    linkedin: socialLinks.linkedin
   }
 };

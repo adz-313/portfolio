@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactSection.css';
+import { socialLinks } from '../../data/socialLinks';
 
 const ContactSection = () => {
   return (
@@ -9,24 +10,20 @@ const ContactSection = () => {
           SAY <span className="typo-highlight">HELLO</span>
         </h2>
 
-        <a href="mailto:sawantaj20@gmail.com" className="typo-email animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          sawantaj20@gmail.com
+        <a href={`mailto:${socialLinks.email}`} className="typo-email animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          {socialLinks.email}
         </a>
 
         <div className="typo-links animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <a href="https://linkedin.com/in/aditya-sawant-2000" target="_blank" rel="noopener noreferrer" className="typo-link">
+          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="typo-link">
             LinkedIn
             <span className="typo-arrow">↗</span>
           </a>
-          <a href="https://github.com/adz-313" target="_blank" rel="noopener noreferrer" className="typo-link">
+          <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="typo-link">
             GitHub
             <span className="typo-arrow">↗</span>
           </a>
-          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="typo-link">
-            Twitter
-            <span className="typo-arrow">↗</span>
-          </a> */}
-          <a href="https://www.instagram.com/ya_boi_adi/" target="_blank" rel="noopener noreferrer" className="typo-link">
+          <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="typo-link">
             Instagram
             <span className="typo-arrow">↗</span>
           </a>

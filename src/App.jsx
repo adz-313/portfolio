@@ -6,6 +6,7 @@ import ExperienceSection from './components/ExperienceSection/ExperienceSection'
 import AchievementsSection from './components/Achievements/Achievements';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import ContactSection from './components/ContactSection/ContactSection';
+import BonusSection from './components/BonusSection/BonusSection';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         {/* <AchievementsSection /> */}
         <ProjectsSection />
         <ContactSection />
+        <BonusSection />
       </main>
       <Footer />
     </div>

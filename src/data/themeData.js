@@ -11,7 +11,7 @@ export const themes = {
     '--accent-blue': '#3b82f6',
     '--accent-purple': '#8b5cf6',
     '--accent-cyan': '#06b6d4',
-    '--accent-gradient': 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    '--accent-gradient': 'linear-gradient(135deg, #3b82f6 -10%, #8b5cf6 110%)',
     '--accent-glow': 'rgba(139, 92, 246, 0.4)',
 
     '--glass-border': 'rgba(255, 255, 255, 0.05)',
@@ -32,7 +32,7 @@ export const themes = {
     '--accent-blue': '#3b82f6',
     '--accent-purple': '#8b5cf6',
     '--accent-cyan': '#06b6d4',
-    '--accent-gradient': 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    '--accent-gradient': 'linear-gradient(135deg, #3b82f6 -10%, #8b5cf6 110%)',
     '--accent-glow': 'rgba(139, 92, 246, 0.4)',
 
     '--glass-border': 'rgba(0, 0, 0, 0.08)',
