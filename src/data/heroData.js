@@ -1,8 +1,8 @@
 export const heroData = {
   title: ["backend.", "architect.", "builder."],
   name: "Aditya Sawant",
-  role: "Software Engineer",
-  description: "Specializing in Java, Spring Boot, microservices, and distributed systems. Building scalable applications that solve complex problems.",
+  role: "Senior Software Engineer",
+  description: "Specializing in Java, Spring Boot, microservices, and distributed systems. Writing simple code to solve complex problems.",
   profileImage: "/profile.png",
   initials: "AS",
   links: {

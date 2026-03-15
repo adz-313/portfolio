@@ -4,22 +4,21 @@ export const aboutData = {
   title: "About Me",
   leadText: (
     <>
-      I am a Software Engineer with <span className="highlight-text">more than 3 years of experience</span> crafting robust backend systems and elegant software solutions.
+      I am a FullStack Software Engineer with <span className="highlight-text">more than 3 years of experience</span> turning coffee and sleep deprivation into robust backend systems and elegant UI solutions.
     </>
   ),
   paragraphs: [
     (
       <>
-        My expertise lies in building scalable, high-performance backends using <strong>Java and Spring Boot</strong>.
-        I have a strong foundation in designing and implementing <strong>microservices architectures</strong> that can
-        handle complex business requirements and high traffic loads efficiently.
+        I'm a backend engineer with a passion for building systems that are fast, reliable, and — most importantly — don't wake anyone up at 3am.
+        I work primarily in Java and Spring, which means I've developed a healthy respect for clean architecture and an unhealthy familiarity with cryptic stack traces.
+        When I'm not optimizing queries that someone else wrote in 2011, I'm writing unit tests for code that "definitely doesn't need unit tests." Spoiler: it always needs unit tests.
       </>
     ),
     (
       <>
-        Beyond general software engineering, I have a deep-rooted interest in <strong>finance systems and stock markets</strong>.
-        I love the challenge of building systems that require low latency, high throughput, and absolute reliability—qualities
-        essential in financial technology.
+        In my free time, I also explore new technologies like GenAI, working my way up to the pinnacle of modern programming — otherwise known as Vibe Coding.
+        Beyond software engineering, I also have a knack for thriller movies and books, singing, badminton,and volunteering. If you like any of these activities, hit me up!
       </>
     )
   ],
@@ -37,7 +36,7 @@ export const aboutData = {
       )
     },
     {
-      text: "Fintech Enthusiast",
+      text: "GenAI Enthusiast",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
       )
@@ -45,7 +44,7 @@ export const aboutData = {
   ],
   stats: [
     { number: "3+", label: "Years of\nExperience" },
-    { number: "10+", label: "Projects\nCompleted" },
+    { number: "7+", label: "Projects\nCompleted" },
     { number: "5+", label: "Microservices\nDeployed" }
   ]
 };

@@ -23,11 +23,13 @@
   overflow: hidden;
 }
 
-/* Base glowing border */
 .achieve-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius-lg);
   padding: 1px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
@@ -45,7 +47,6 @@
 
 .hover-glow:hover {
   transform: translateY(-8px);
-  /* Use 0 for x and y offsets to make shadow perfectly even */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2), 0 0 25px var(--accent-glow);
   background: var(--glass-hover);
 }
@@ -54,7 +55,6 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
-/* Layout Sizes */
 .achieve-bento-main {
   grid-column: span 2;
   grid-row: span 2;
@@ -91,7 +91,7 @@
 .wide-content-left {
   flex: 1;
   padding-right: 2rem;
-  border-right: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .wide-content-right {
@@ -101,7 +101,6 @@
   min-width: 300px;
 }
 
-/* Typography elements */
 .bento-year {
   color: var(--accent-cyan);
   font-family: var(--font-mono);
@@ -148,7 +147,6 @@
   line-height: 1.6;
 }
 
-/* Stats */
 .stat-number {
   margin-bottom: 0.5rem;
 }
@@ -197,30 +195,30 @@
   .achieve-bento-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .achieve-bento-main {
     grid-column: span 2;
   }
-  
+
   .achieve-bento-medium {
     grid-column: span 1;
   }
-  
+
   .achieve-bento-wide {
     grid-column: span 2;
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .wide-content-left {
     border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-right: 0;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     width: 100%;
   }
-  
+
   .wide-content-right {
     padding-left: 0;
     width: 100%;
@@ -232,7 +230,7 @@
   .achieve-bento-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .achieve-stats-container,
   .achieve-bento-main,
   .achieve-bento-medium,

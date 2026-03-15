@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
 import { themes } from '../data/themeData';
 
 const ThemeContext = createContext();
@@ -9,7 +9,6 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // Check for saved theme preference or use dark as default
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme !== 'light';
     setIsDarkMode(isDark);
@@ -21,8 +20,7 @@ export const ThemeProvider = ({ children }) => {
     Object.keys(theme).forEach(key => {
       document.documentElement.style.setProperty(key, theme[key]);
     });
-    
-    // Kept in case some existing code expects the data-attribute (though styling relies on injected CSS vars now)
+
     if (themeName === 'light') {
       document.documentElement.setAttribute('data-theme', 'light');
     } else {

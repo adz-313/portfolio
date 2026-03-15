@@ -4,10 +4,9 @@ export const achievementsData = {
     {
       id: 1,
       year: "2024",
-      title: "1st Place - Global FinTech Hackathon",
-      organization: "TechCorp Industries",
-      description: "Developed a predictive algorithmic trading model using Python and AWS within 48 hours, beating over 500 competing teams.",
-      icon: "trophy" // Can map to specific SVG later
+      title: "Bravo Award",
+      organization: "Persistent Systems",
+      description: "Awarded for outstanding performance and contributions to the company."
     },
     {
       id: 2,
@@ -35,7 +34,7 @@ export const achievementsData = {
     }
   ],
   stats: [
-    { label: "Hackathons Won", value: "5", suffix: "+" },
+    { label: "Hackathons Won", value: "0", suffix: "+" },
     { label: "Lines of Code", value: "100", suffix: "k+" },
     { label: "Open Source PRs", value: "50", suffix: "+" },
     { label: "Cups of Coffee", value: "1000", suffix: "+" }

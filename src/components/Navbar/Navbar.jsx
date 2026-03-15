@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import './Navbar.css';
 
@@ -24,8 +24,8 @@ const Navbar = () => {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
-        <button 
-          className="theme-toggle-btn" 
+        <button
+          className="theme-toggle-btn"
           onClick={toggleTheme}
           aria-label="Toggle theme"
         >

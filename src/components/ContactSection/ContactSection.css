@@ -1,6 +1,6 @@
 .text-style-contact {
   padding: 8rem 0 6rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Divider to separate from the previous option */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-container-typo {
@@ -13,7 +13,7 @@
 }
 
 .typo-heading {
-  font-size: clamp(4rem, 10vw, 9rem); /* Massive responsive typography */
+  font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.05em;

@@ -1,5 +1,5 @@
 .hero-section {
-  min-height: calc(100vh - 80px); /* Fill screen minus navbar */
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   padding-top: max(120px, 15vh);
@@ -15,7 +15,7 @@
   width: 100%;
   height: 100%;
   background-size: 50px 50px;
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--glass-border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--glass-border) 1px, transparent 1px);
   z-index: 1;
@@ -33,7 +33,6 @@
   position: relative;
 }
 
-/* TYPOGRAPHY SECTION */
 .hero-main-text {
   position: relative;
   z-index: 2;
@@ -51,14 +50,12 @@
 .highlight-text-outline {
   color: transparent;
   -webkit-text-stroke: 1.5px var(--accent-blue);
-  /* Fallback text fill just in case */
   background: var(--accent-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* INFO GRID SECTION */
 .hero-info-grid {
   display: flex;
   flex-direction: column;
@@ -90,7 +87,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* PROFILE IMAGE SECTION */
 .profile-image-container {
   width: 100px;
   height: 100px;
@@ -116,7 +112,7 @@
   font-weight: 800;
   font-size: 2rem;
   color: var(--accent-blue);
-  display: none; /* Controlled by React onError */
+  display: none;
 }
 
 .intro-name {
@@ -141,10 +137,10 @@
 }
 
 .action-box {
-  padding: 1.5rem 2.5rem; /* Reduced top/bottom padding to make it less empty */
+  padding: 1.5rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* Tighter gap between buttons and socials */
+  gap: 1.25rem;
 }
 
 .hero-cta-buttons {
@@ -185,17 +181,16 @@
   border-radius: 50%;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .hero-title {
     text-align: center;
   }
-  
+
   .hero-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -206,7 +201,7 @@
   .hero-info-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-section {
     padding-top: max(100px, 12vh);
   }

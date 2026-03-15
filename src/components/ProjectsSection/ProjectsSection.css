@@ -12,18 +12,13 @@
   gap: 2rem;
   margin-top: 1rem;
   padding-bottom: 3.5rem;
-  /* space for scrollbar/shadows */
   padding-top: 2.5rem;
-  /* space for top shadow bouncing */
   padding-left: 2rem;
-  /* space for left shadow */
   padding-right: 2rem;
-  /* space for right shadow */
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Custom hide scrollbar for clean look but keep scrollability */
 .projects-carousel::-webkit-scrollbar {
   height: 8px;
 }
@@ -47,20 +42,14 @@
   flex-direction: column;
   padding: 2.5rem;
   height: 450px;
-  /* Force a consistent height */
   position: relative;
   overflow: hidden;
   transition: var(--transition-bounce);
-
-  /* Keep original minimum size but prevent shrinking */
   width: min(100%, 380px);
-  /* This gives it the same flexible width as grid */
   flex: 0 0 380px;
   scroll-snap-align: center;
-  /* Center snapping feels better */
 }
 
-/* Theme-colored border effect on hover */
 .project-card::before {
   content: '';
   position: absolute;
@@ -82,7 +71,6 @@
 
 .project-card:hover {
   transform: translateY(-8px);
-  /* Use 0 for x and y offsets to make shadow perfectly even */
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 15px var(--accent-glow);
   background: var(--glass-hover);
 }
@@ -125,7 +113,6 @@
   color: var(--text-primary);
   line-height: 1.2;
   min-height: 3.6rem;
-  /* Ensures title area is uniform even if names span 1 or 2 lines */
   display: flex;
   align-items: center;
 }
@@ -160,7 +147,6 @@
   text-decoration: underline;
 }
 
-/* Modal Styles */
 .project-modal-backdrop {
   position: fixed;
   top: 0;
@@ -265,7 +251,6 @@
   font-size: 0.8rem;
   color: var(--text-tertiary);
   margin-top: auto;
-  /* Push tech list to the bottom */
 }
 
 .project-tech-list li {
@@ -279,6 +264,5 @@
 @media (max-width: 768px) {
   .project-card {
     flex: 0 0 85vw;
-    /* Almost full width on mobile */
   }
 }
