@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import AboutSection from './components/AboutSection/AboutSection';
@@ -12,18 +12,19 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="app-container">
-      <Analytics/>
       <Navbar />
       <main>
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
         {/* <AchievementsSection /> */}
+        <ResearchSection />
         <ProjectsSection />
         <ContactSection />
         <BonusSection />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
