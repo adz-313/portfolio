@@ -18,7 +18,6 @@ function App() {
         <AboutSection />
         <ExperienceSection />
         {/* <AchievementsSection /> */}
-        <ResearchSection />
         <ProjectsSection />
         <ContactSection />
         <BonusSection />
