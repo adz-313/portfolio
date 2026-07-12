@@ -6,7 +6,7 @@ export const heroData = {
   role: "Senior Software Engineer",
   description:
     "Specializing in Java, Spring Boot, microservices, and distributed systems. Writing simple code to solve complex problems.",
-  profileImage: "/profile.jpg",
+  profileImage: "/profile.png",
   initials: "AS",
   links: {
     projects: "#projects",
